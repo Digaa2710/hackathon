@@ -15,6 +15,7 @@ function ImagesDemo() {
 
   return (
     <div className={`main1 ${isSubmitting ? 'submitting' : ''}` }>
+      <div className='outer-design outer-design1'> </div>
       <div className='main'>
       <div className='img'>
         <img src={newimage} height='500' width='400' alt='New Image' />
@@ -25,12 +26,14 @@ function ImagesDemo() {
         </div>
         <h1>WELCOME</h1>
         <div className='comp1'>
-          <FontAwesomeIcon icon={faUser} />
-          <input type="text" placeholder='Username'></input>
+          <FontAwesomeIcon icon={faUser} className='f'/>
+          <input type="text" className="text" required></input>
+          <label className="label" required>Name</label>
         </div>
         <div className='comp2'>
-          <FontAwesomeIcon icon={faLock} />
-          <input type="password" placeholder='Password'></input>
+          <FontAwesomeIcon icon={faLock} className='f' />
+          <input type="password" className="text" required ></input>
+          <label className="label">Password</label>
         </div>
         <button onClick={handleSubmission}>
             {isSubmitting && (<div className='block'style={{ opacity: 1 }}>
@@ -48,6 +51,7 @@ function ImagesDemo() {
         </div>
       </div>
       </div>
+     
     </div>
   );
 }
