@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: black;
   
 }
 .main {
@@ -23,6 +23,7 @@
    border-top-right-radius: 30px;
    border:5px aqua solid;
    box-shadow: 0 0 10px #000000da;
+   z-index: 3;
 }
 
 
@@ -43,12 +44,26 @@
     font-size:40px;
   }
   .comp1,.comp2 {
+    position: relative;
     display: flex;
     align-items: center;
    gap:20px;
    border-bottom: 2px black solid ;
    width:300px;
    margin-bottom: 20px;
+  }
+  .label{
+    position: absolute;
+    left :32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .text:focus ~ .label,.text:valid ~ .label{
+    top:-14px;
+    color:purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .text:focus ~ .f{
+    color: purple;
   }
   .user{
     display: flex;
@@ -106,5 +121,13 @@ input{
 .diff{
   border-radius: 0%;
 }
+/* .outer-design{
+  height:100vh;
+  width:60vw;
+  position:absolute;
+  top:0;
+  left:0;
+  clip-path: polygon(0 0, 13% 0, 73% 40%, 50% 100%, 0 100%, 0% 25%);
+  background-color: blueviolet;
 
-
+} */
