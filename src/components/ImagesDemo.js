@@ -10,11 +10,12 @@ function ImagesDemo() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmission = () => {
-    setIsSubmitting(true);
+    setIsSubmitting(!isSubmitting);
 };
 
   return (
-    <div className={`main1 ${isSubmitting ? 'submitting' : ''}` }>
+    // <div className={`main1 ${isSubmitting ? 'submitting' : ''}` }>
+    <div className={"main1"}>
       <div className='outer-design outer-design1'> </div>
       <div className='main'>
       <div className='img'>
@@ -36,10 +37,6 @@ function ImagesDemo() {
           <label className="label">Password</label>
         </div>
         <button onClick={handleSubmission}>
-            {isSubmitting && (<div className='block'style={{ opacity: 1 }}>
-                <p>You have successfully login </p>
-                <button class='diff'>ok</button>
-            </div>)}
           Submit
         </button>
         <p>If you don't have any account <a href='Sign Up'>Sign Up</a> or</p>
@@ -50,7 +47,17 @@ function ImagesDemo() {
           <FontAwesomeIcon icon={faLinkedinIn} />
         </div>
       </div>
+      {isSubmitting && (
+        <div className='block'>
+          <div className="model">
+              <p onClick={handleSubmission}>X</p>
+              <p>success!!!!!!woho</p>
+          </div>
+        </div>
+      )}
       </div>
+
+      
      
     </div>
   );
