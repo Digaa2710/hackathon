@@ -28,12 +28,6 @@
 
 
 
-
-.main1.submitting{
-  opacity:0.5;
- background-color: black;
-
-}
 .comp {
     display: flex;
     flex-direction: column;
@@ -62,9 +56,8 @@
     color:purple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  .text:focus ~ .f{
-    color: purple;
-  }
+  
+   
   .user{
     display: flex;
     justify-content: center;
@@ -102,14 +95,15 @@ input{
     display: flex;
     font-size: 20px;
 }
-.block{
+/* .block{
     
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 40%;
+   
+   transform: translate(-80%, -60%);
    height:500px;
    width:500px;
+   
     background-color: white;
     opacity: 1;
     display: flex;
@@ -117,7 +111,9 @@ input{
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-}
+   
+   
+} */
 .diff{
   border-radius: 0%;
 }
@@ -131,3 +127,27 @@ input{
   background-color: blueviolet;
 
 } */
+
+.block
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  z-index: 5;
+  backdrop-filter: blur(25px);
+  cursor:alias;
+}
+
+.model
+{
+   width: 20vw;
+   height: 60vh;
+   background-color: pink;
+   color: white;
+}
